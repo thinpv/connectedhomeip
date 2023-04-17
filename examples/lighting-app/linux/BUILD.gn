@@ -31,6 +31,9 @@ config("includes") {
   include_dirs = [
     ".",
     "include",
+    "/home/builder/lib/android-ndk-r23c/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include",
+    "/home/builder/lib/android-ndk-r23c/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1",
+    "/home/builder/lib/android-ndk-r23c/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi",
   ]
 }
 

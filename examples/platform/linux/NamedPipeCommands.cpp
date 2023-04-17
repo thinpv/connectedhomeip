@@ -52,7 +52,7 @@ CHIP_ERROR NamedPipeCommands::Stop()
     mStarted  = false;
     mDelegate = nullptr;
 
-    VerifyOrReturnError(pthread_cancel(mChipEventCommandListener) == 0, CHIP_ERROR_CANCELLED);
+    // VerifyOrReturnError(pthread_cancel(mChipEventCommandListener) == 0, CHIP_ERROR_CANCELLED);
 
     // Wait further for the thread to terminate if we had previously created it.
     VerifyOrReturnError(pthread_join(mChipEventCommandListener, nullptr) == 0, CHIP_ERROR_SHUT_DOWN);
