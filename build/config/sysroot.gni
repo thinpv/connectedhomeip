@@ -42,7 +42,9 @@ if (sysroot_platform_config != "") {
 _defaults = {
   sysroot = ""
   runtime_library_cflags = []
-  runtime_library_ldflags = []
+  runtime_library_ldflags = [
+    "-L/home/builder/lib/android-ndk-r23c/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/26",
+  ]
 
   # Update defaults with platform values, if any.
   if (sysroot_platform_config != "") {
