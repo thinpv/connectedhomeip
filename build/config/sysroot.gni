@@ -41,7 +41,11 @@ if (sysroot_platform_config != "") {
 
 _defaults = {
   sysroot = ""
-  runtime_library_cflags = []
+  runtime_library_cflags = [
+    "-I/home/builder/lib/android-ndk-r23c/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include",
+    "-I/home/builder/lib/android-ndk-r23c/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1",
+    "-I/home/builder/lib/android-ndk-r23c/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi",
+  ]
   runtime_library_ldflags = [
     "-L/home/builder/lib/android-ndk-r23c/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/26",
   ]

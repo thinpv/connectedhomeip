@@ -18,13 +18,13 @@ import("${build_root}/toolchain/gcc_toolchain.gni")
 
 declare_args() {
   # C compiler to use for target build.
-  target_cc = ""
+  target_cc = "/home/builder/lib/android-ndk-r23c/toolchains/llvm/prebuilt/linux-x86_64/bin/armv7a-linux-androideabi26-clang"
 
   # C++ compiler to use for target build.
-  target_cxx = ""
+  target_cxx = "/home/builder/lib/android-ndk-r23c/toolchains/llvm/prebuilt/linux-x86_64/bin/armv7a-linux-androideabi26-clang++"
 
   # Archive tool to use for target build.
-  target_ar = ""
+  target_ar = "/home/builder/lib/android-ndk-r23c/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar"
 }
 
 gcc_toolchain("custom") {
