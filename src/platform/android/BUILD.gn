@@ -18,7 +18,7 @@ import("//build_overrides/chip.gni")
 import("${chip_root}/src/platform/device.gni")
 
 import("${build_root}/config/android_abi.gni")
-import("${chip_root}/build/chip/java/rules.gni")
+#import("${chip_root}/build/chip/java/rules.gni")
 
 assert(chip_device_platform == "android")
 
@@ -65,45 +65,4 @@ static_library("android") {
   public_deps = [ "${chip_root}/src/platform:platform_base" ]
 
   public_configs = []
-}
-
-android_library("java") {
-  output_name = "AndroidPlatform.jar"
-
-  deps = [
-    ":android_sdk",
-    "${chip_root}/third_party/android_deps:annotation",
-  ]
-  data_deps = [ ":android" ]
-
-  sources = [
-    "java/chip/platform/AndroidBleManager.java",
-    "java/chip/platform/AndroidChipPlatform.java",
-    "java/chip/platform/AndroidChipPlatformException.java",
-    "java/chip/platform/BleCallback.java",
-    "java/chip/platform/BleManager.java",
-    "java/chip/platform/ChipMdnsCallback.java",
-    "java/chip/platform/ChipMdnsCallbackImpl.java",
-    "java/chip/platform/ConfigurationManager.java",
-    "java/chip/platform/DiagnosticDataProvider.java",
-    "java/chip/platform/DiagnosticDataProviderImpl.java",
-    "java/chip/platform/KeyValueStoreManager.java",
-    "java/chip/platform/NetworkInterface.java",
-    "java/chip/platform/NsdManagerServiceBrowser.java",
-    "java/chip/platform/NsdManagerServiceResolver.java",
-    "java/chip/platform/NsdServiceFinderAndResolver.java",
-    "java/chip/platform/PreferencesConfigurationManager.java",
-    "java/chip/platform/PreferencesKeyValueStoreManager.java",
-    "java/chip/platform/ServiceBrowser.java",
-    "java/chip/platform/ServiceResolver.java",
-  ]
-
-  javac_flags = [
-    "-Xlint:deprecation",
-    "-parameters",  # Store infomation about method parameters
-  ]
-}
-
-java_prebuilt("android_sdk") {
-  jar_path = "${android_sdk_root}/platforms/android-26/android.jar"
 }

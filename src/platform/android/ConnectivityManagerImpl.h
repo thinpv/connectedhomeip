@@ -158,12 +158,12 @@ private:
 
     // ===== Private members reserved for use by this class only.
 
-    ConnectivityManager::WiFiStationMode mWiFiStationMode;
-    ConnectivityManager::WiFiAPMode mWiFiAPMode;
-    WiFiAPState mWiFiAPState;
-    System::Clock::Timestamp mLastAPDemandTime;
-    System::Clock::Timeout mWiFiStationReconnectInterval;
-    System::Clock::Timeout mWiFiAPIdleTimeout;
+    // ConnectivityManager::WiFiStationMode mWiFiStationMode;
+    // ConnectivityManager::WiFiAPMode mWiFiAPMode;
+    // WiFiAPState mWiFiAPState;
+    // System::Clock::Timestamp mLastAPDemandTime;
+    // System::Clock::Timeout mWiFiStationReconnectInterval;
+    // System::Clock::Timeout mWiFiAPIdleTimeout;
 };
 
 #if CHIP_DEVICE_CONFIG_ENABLE_WPA
