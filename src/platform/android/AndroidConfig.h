@@ -73,6 +73,7 @@ public:
     static const Key kConfigKey_CountryCode;
     static const Key kConfigKey_ProductId;
     static const Key kConfigKey_ProductName;
+    static const Key kConfigKey_VendorId;
     static const Key kConfigKey_SoftwareVersion;
     static const Key kConfigKey_SoftwareVersionString;
     static const Key kConfigKey_PartNumber;

@@ -38,6 +38,9 @@ namespace DeviceLayer {
 class ConfigurationManagerImpl : public Internal::GenericConfigurationManagerImpl<Internal::AndroidConfig>
 {
 public:
+    CHIP_ERROR StoreVendorId(uint32_t vendorId);
+    CHIP_ERROR StoreProductId(uint32_t productId);
+
     void InitializeWithObject(jobject managerObject);
     static ConfigurationManagerImpl & GetDefaultInstance();
     CHIP_ERROR GetSoftwareVersionString(char * buf, size_t bufSize) override;

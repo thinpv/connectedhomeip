@@ -110,7 +110,7 @@ Clusters::NetworkCommissioning::Instance sWiFiNetworkCommissioningInstance(0, &s
 Clusters::NetworkCommissioning::Instance sThreadNetworkCommissioningInstance(0, &sThreadDriver);
 #endif // CHIP_DEVICE_CONFIG_ENABLE_THREAD
 
-Clusters::NetworkCommissioning::Instance sEthernetNetworkCommissioningInstance(0, &sEthernetDriver);
+// Clusters::NetworkCommissioning::Instance sEthernetNetworkCommissioningInstance(0, &sEthernetDriver);
 
 const int16_t minMeasuredValue     = -27315;
 const int16_t maxMeasuredValue     = 32766;
@@ -808,7 +808,7 @@ void ApplicationInit()
     }
     else
     {
-        sEthernetNetworkCommissioningInstance.Init();
+        // sEthernetNetworkCommissioningInstance.Init();
     }
 }
 

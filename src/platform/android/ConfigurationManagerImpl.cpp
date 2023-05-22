@@ -48,6 +48,16 @@ ConfigurationManagerImpl & ConfigurationManagerImpl::GetDefaultInstance()
     return sInstance;
 }
 
+CHIP_ERROR ConfigurationManagerImpl::StoreVendorId(uint32_t vendorId)
+{
+    return WriteConfigValue(AndroidConfig::kConfigKey_VendorId, vendorId);
+}
+
+CHIP_ERROR ConfigurationManagerImpl::StoreProductId(uint32_t productId)
+{
+    return WriteConfigValue(AndroidConfig::kConfigKey_ProductId, productId);
+}
+
 void ConfigurationManagerImpl::InitializeWithObject(jobject managerObject)
 {
     JNIEnv * env                     = JniReferences::GetInstance().GetEnvForCurrentThread();
